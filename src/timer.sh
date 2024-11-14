@@ -21,6 +21,8 @@ stop_timer() {
         LAST_DURATION=$((end_time - CURRENT_START_TIME))
         log_message "Timer stopped at $end_time, duration: $LAST_DURATION seconds"
         CURRENT_START_TIME=0
+    else
+        log_message "Timer was not running."
     fi
 }
 
